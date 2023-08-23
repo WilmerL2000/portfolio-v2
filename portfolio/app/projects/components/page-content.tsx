@@ -2,8 +2,6 @@
 
 import Header from '@/components/ui/header';
 import ProjectCard from './project-card';
-import { motion } from 'framer-motion';
-import { container } from '@/lib/variants';
 
 type Props = {
   projects: HomeProjects[];

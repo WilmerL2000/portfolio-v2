@@ -6,7 +6,7 @@ type Props = {
 
 export default function TechLogo({ tech }: Props) {
   return (
-    <div className="rounded-full p-4 md:p-6">
+    <div className="rounded-full p-4 md:p-6 bg-white/30">
       <Tooltip
         showArrow
         content={tech.title}

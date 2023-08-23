@@ -1,6 +1,5 @@
 'use client';
 
-import { item } from '@/lib/variants';
 import { Card, CardFooter, Image } from '@nextui-org/react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
@@ -36,8 +35,11 @@ export default function ProjectCard({
           src={projectImage}
         />
         <motion.div layoutId={title}>
-          <CardFooter className="absolute bg-black/40 border-1 overflow-hidden py-2 before:rounded-xl rounded-lg bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-            <footer className="text-white/60">{title}</footer>
+          <CardFooter
+            className="absolute bg-black/40 border-1 overflow-hidden py-2 
+            before:rounded-xl rounded-lg bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10"
+          >
+            <footer className="text-white/70">{title}</footer>
           </CardFooter>
         </motion.div>
       </Card>

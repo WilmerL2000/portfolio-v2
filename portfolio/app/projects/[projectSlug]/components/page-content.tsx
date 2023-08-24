@@ -30,7 +30,7 @@ export default function PageContent({ project }: Props) {
         className="px-5 md:px-0"
       >
         <motion.div variants={item}>
-          <div className="grid md:grid-cols-2 gap-4 mt-6 md:mt-16 pb-10">
+          <div className="grid lg:grid-cols-2 gap-3 mt-6 md:mt-16 pb-10">
             <Card className="py-4 bg-[#a855f7] rounded-lg" isPressable>
               <CardHeader className="pt-2 flex items-center justify-between mb-4 px-8">
                 <h2 className="uppercase font-bold text-lg md:text-4xl">
@@ -62,8 +62,8 @@ export default function PageContent({ project }: Props) {
               </CardBody>
             </Card>
           </div>
-          <ImageList images={project.projectImages} />
         </motion.div>
+        <ImageList images={project.projectImages} />
       </motion.div>
     </motion.div>
   );

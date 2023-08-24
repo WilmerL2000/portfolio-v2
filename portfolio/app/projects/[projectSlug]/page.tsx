@@ -6,6 +6,8 @@ type Props = {
   params: { projectSlug: string };
 };
 
+export const revalidate = 86400;
+
 export default async function ProjectPage({ params }: Props) {
   const project = await getProject(params.projectSlug);
   return (
@@ -13,4 +15,16 @@ export default async function ProjectPage({ params }: Props) {
       <PageContent project={project} />
     </Container>
   );
+}
+
+export async function generateMetadata({ params }: Props) {
+  const project = await getProject(params.projectSlug);
+
+  return {
+    title: project.title,
+    description: project.summary,
+    openGraph: {
+      images: [project.projectImage],
+    },
+  };
 }

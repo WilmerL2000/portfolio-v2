@@ -17,7 +17,7 @@ interface Project extends SanityBody {
     projectImages: ProjectImage[]
 }
 
-type HomeProjects = Pick<Project, '_id' | 'title' | 'projectImage' | 'slug'>
+type HomeProject = Pick<Project, '_id' | 'title' | 'projectImage' | 'slug'>
 
 interface Technology extends SanityBody {
     _type: string;

@@ -3,19 +3,29 @@
 import { Card, CardBody, CardHeader, Divider } from '@nextui-org/react';
 import { motion } from 'framer-motion';
 import { ArrowDownWideNarrow, Cpu } from 'lucide-react';
-
+import { useEffect } from 'react';
 import ImageList from '@/components/image-list';
 import TechLogo from '@/components/tech-logo';
 import ProjectHeader from '@/components/ui/project-header';
+import ProjectLinkButton from '@/components/ui/project-link-button';
 import { container, item } from '@/lib/variants';
+import useProject from '@/hooks/use-project';
 
 type Props = {
   project: Project;
+  projects: HomeProject[];
 };
 
-export default function PageContent({ project }: Props) {
+export default function PageContent({ project, projects }: Props) {
+  const projectStore = useProject();
+
+  useEffect(() => {
+    projectStore.setActiveProject(project);
+    projectStore.setProjects(projects);
+  }, [projectStore.activeProject]);
+
   return (
-    <motion.div className="px-1 md:px-5 mt-3 md:mt-5 overflow-hidden pb-10 ">
+    <motion.div className="px-1 md:px-5 mt-3 md:mt-5 overflow-hidden pb-6">
       <ProjectHeader
         projectImage={project.projectImage}
         title={project.title}
@@ -31,7 +41,7 @@ export default function PageContent({ project }: Props) {
       >
         <motion.div variants={item}>
           <div className="grid lg:grid-cols-2 gap-3 mt-6 md:mt-16 pb-10">
-            <Card className="py-4 bg-[#a855f7] rounded-lg" isPressable>
+            <Card className="py-4 bg-[#a855f7] rounded-lg">
               <CardHeader className="pt-2 flex items-center justify-between mb-4 px-8">
                 <h2 className="uppercase font-bold text-lg md:text-4xl">
                   Description
@@ -44,10 +54,7 @@ export default function PageContent({ project }: Props) {
               </CardBody>
             </Card>
 
-            <Card
-              className="py-4 mt-6 md:mt-0 bg-[#6FEC9E] dark:bg-[#4CA76E] rounded-lg"
-              isPressable
-            >
+            <Card className="py-4 mt-6 md:mt-0 bg-[#6FEC9E] dark:bg-[#4CA76E] rounded-lg">
               <CardHeader className="pt-2 flex items-center justify-between mb-3 px-8">
                 <h2 className="uppercase font-bold text-lg md:text-4xl">
                   Technologies
@@ -64,6 +71,21 @@ export default function PageContent({ project }: Props) {
           </div>
         </motion.div>
         <ImageList images={project.projectImages} />
+
+        <Divider className="mt-10 md:mt-16 mb-8 " />
+
+        <div className="flex justify-between">
+          <ProjectLinkButton
+            project={projectStore.previousProject}
+            direction="left"
+            url={`/projects/${projectStore.previousProject?.slug}`}
+          />
+          <ProjectLinkButton
+            project={projectStore.nextProject}
+            direction="right"
+            url={`/projects/${projectStore.nextProject?.slug}`}
+          />
+        </div>
       </motion.div>
     </motion.div>
   );

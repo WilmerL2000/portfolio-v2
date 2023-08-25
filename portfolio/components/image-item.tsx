@@ -17,9 +17,10 @@ export default function ImageItem({ image }: ImageItemProps) {
     >
       <Card
         shadow="sm"
+        radius="lg"
         isPressable
         isBlurred
-        className="border-none shadow-lg bg-black/10 dark:bg-white/40 rounded-lg"
+        className="border-none dark:bg-white/10 rounded-lg"
       >
         <Image
           alt={image._key}

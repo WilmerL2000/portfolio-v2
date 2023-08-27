@@ -20,3 +20,10 @@ export const item = {
         }
     }
 }
+
+
+export const menuItem = {
+    initial: { scale: 1.2 },
+    animate: { y: -26, },
+    transition: { type: 'spring', stiffness: 400, damping: 17 }
+}

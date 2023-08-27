@@ -25,7 +25,7 @@ export default function PageContent({ project, projects }: Props) {
   }, [projectStore.activeProject]);
 
   return (
-    <motion.div className="px-1 md:px-5 mt-3 md:mt-5 overflow-hidden pb-6 flex flex-col gap-4">
+    <motion.div className="px-1 md:px-5 mt-3 md:mt-5 overflow-hidden pb-10 flex flex-col gap-4">
       <ProjectHeader
         projectImage={project.projectImage}
         title={project.title}

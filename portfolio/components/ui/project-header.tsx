@@ -28,7 +28,7 @@ export default function ProjectHeader({
       <motion.div
         layoutId={title}
         className="flex justify-between items-center absolute bottom-2 md:bottom-1 left-0 right-0 
-          m-2 p-1 md:p-4 backdrop-blur-xl bg-black/30 rounded-lg "
+          m-2 p-1 md:p-4 backdrop-blur-xl bg-black/30 rounded-lg"
       >
         <h1 className="font-bold text-lg sm:text-5xl text-white/70">{title}</h1>
         <div className="flex justify-between gap-4 md:gap-5 items-center ">

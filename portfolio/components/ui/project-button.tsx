@@ -20,6 +20,7 @@ export default function ProjectButton({ title, url, icon }: Props) {
         after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 
             hover:after:scale-150 hover:after:opacity-0 p-0 md:py-7"
       endContent={icon}
+      aria-label={title}
     >
       <span className="hidden md:block">{title}</span>
     </Button>

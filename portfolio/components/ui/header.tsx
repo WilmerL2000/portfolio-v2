@@ -1,5 +1,3 @@
-import { IconNode } from 'lucide-react';
-
 type HeaderProps = {
   title: string;
   icon?: React.ReactNode;

@@ -25,7 +25,7 @@ export default function PageContent({ project, projects }: Props) {
   }, [projectStore.activeProject]);
 
   return (
-    <motion.div className="px-1 md:px-5 mt-3 md:mt-5 overflow-hidden pb-6">
+    <motion.div className="px-1 md:px-5 mt-3 md:mt-5 overflow-hidden pb-6 flex flex-col gap-4">
       <ProjectHeader
         projectImage={project.projectImage}
         title={project.title}
@@ -37,10 +37,10 @@ export default function PageContent({ project, projects }: Props) {
         variants={container}
         initial="hidden"
         animate="visible"
-        className="px-5 md:px-0"
+        className="px-5 md:px-0 flex flex-col gap-4"
       >
         <motion.div variants={item}>
-          <div className="grid lg:grid-cols-2 gap-3 mt-6 md:mt-16 pb-10">
+          <div className="grid lg:grid-cols-2 gap-4">
             <Card className="py-4 bg-[#a855f7] rounded-lg">
               <CardHeader className="pt-2 flex items-center justify-between mb-4 px-8">
                 <h2 className="uppercase font-bold text-lg md:text-4xl">
@@ -54,7 +54,7 @@ export default function PageContent({ project, projects }: Props) {
               </CardBody>
             </Card>
 
-            <Card className="py-4 mt-6 md:mt-0 bg-[#6FEC9E] dark:bg-[#4CA76E] rounded-lg">
+            <Card className="py-4 bg-[#6FEC9E] dark:bg-[#4CA76E] rounded-lg">
               <CardHeader className="pt-2 flex items-center justify-between mb-3 px-8">
                 <h2 className="uppercase font-bold text-lg md:text-4xl">
                   Technologies
@@ -72,7 +72,7 @@ export default function PageContent({ project, projects }: Props) {
         </motion.div>
         <ImageList images={project.projectImages} />
 
-        <Divider className="mt-10 md:mt-16 mb-8 " />
+        <Divider className="mt-10 md:mt-16 mb-5 md:mb-8 " />
 
         <div className="flex justify-between">
           <ProjectLinkButton

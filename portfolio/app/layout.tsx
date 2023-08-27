@@ -2,6 +2,7 @@ import { NextProvider } from '@/providers/NextProvider';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import MenuBar from '@/components/menu-bar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="light scroll-smooth">
       <body className={inter.className}>
-        <NextProvider>{children}</NextProvider>
+        <NextProvider>
+          {children}
+          <MenuBar />
+        </NextProvider>
       </body>
     </html>
   );

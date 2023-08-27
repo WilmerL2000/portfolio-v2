@@ -22,7 +22,7 @@ export default function ImageList({ images }: ImagesListProps) {
           <Wallpaper className="w-9 h-9 md:w-14 md:h-14" />
         </div>
       </motion.div>
-      <ul className="grid md:grid-cols-2 gap-3 mt-8">
+      <ul className="grid md:grid-cols-2 gap-4">
         {images.map((image) => (
           <ImageItem key={image._key} image={image} />
         ))}

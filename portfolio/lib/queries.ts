@@ -25,6 +25,7 @@ export const experience = () => {
   const query = `
     *[_type == "experience"]{
       ...,
+      _createdAt,
       technologies[]->,
     } | order(_createdAt asc)
     `

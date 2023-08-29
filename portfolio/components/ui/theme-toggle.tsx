@@ -25,6 +25,7 @@ export default function ThemeToggle() {
             variants={menuItem}
             whileHover={'initial'}
             whileTap={'animate'}
+            className="rounded-full"
           >
             <Button
               className="rounded-full text-[#858585] dark:text-[#7e7e7e] bg-[#f3f3f3] dark:bg-[#232323]  "
@@ -41,6 +42,7 @@ export default function ThemeToggle() {
             variants={menuItem}
             whileHover={'initial'}
             whileTap={'animate'}
+            className="rounded-full"
           >
             <Button
               className="rounded-full text-[#858585] dark:text-[#7e7e7e] bg-[#f3f3f3] dark:bg-[#232323] "

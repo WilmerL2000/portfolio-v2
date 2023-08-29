@@ -23,7 +23,11 @@ export const item = {
 
 
 export const menuItem = {
-    initial: { scale: 1.2 },
+    initial: {
+        scale: 1.2, transition: {
+            duration: .8, type: 'spring'
+        }
+    },
     animate: { y: -26, },
-    transition: { type: 'spring', stiffness: 400, damping: 17 }
+    transition: { duration: 2, type: 'spring', stiffness: 400, damping: 17 }
 }

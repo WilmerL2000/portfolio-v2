@@ -3,7 +3,7 @@
 import { Button } from '@nextui-org/react';
 import { Tooltip } from '@nextui-org/react';
 import { Divider } from '@nextui-org/react';
-import { useParams, usePathname, useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 import {
   Briefcase,
   Github,
@@ -12,8 +12,8 @@ import {
   Linkedin,
   Mail,
 } from 'lucide-react';
+import { useParams, usePathname, useRouter } from 'next/navigation';
 import ThemeToggle from './ui/theme-toggle';
-import { motion } from 'framer-motion';
 import { menuItem } from '@/lib/variants';
 
 export default function MenuBar() {
@@ -66,7 +66,7 @@ export default function MenuBar() {
   return (
     <div
       className="fixed bottom-4 md:bottom-6 mx-auto inset-x-0 flex justify-center z-20 
-      rounded-full shadow-lg max-w-max bg-white/90 backdrop-blur-md dark:bg-[#161616]/70 
+      rounded-full shadow-lg max-w-max bg-white/80 backdrop-blur-md dark:bg-[#161616]/70 
       border border-solid dark:border-gray-800"
     >
       <div className="flex justify-between gap-3 p-2 items-center">
@@ -81,12 +81,13 @@ export default function MenuBar() {
               variants={menuItem}
               whileHover={'initial'}
               whileTap={'animate'}
-              className="flex flex-col items-center gap-1"
+              className="flex flex-col items-center gap-1 rounded-full"
             >
               <Button
                 onPress={() => router.push(route.href)}
                 className="rounded-full text-[#858585] dark:text-[#7e7e7e] bg-[#f3f3f3] dark:bg-[#232323]"
                 isIconOnly
+                aria-label={route.label}
               >
                 {route.Icon}
               </Button>
@@ -108,13 +109,15 @@ export default function MenuBar() {
               variants={menuItem}
               whileHover={'initial'}
               whileTap={'animate'}
+              className="rounded-full"
             >
               <Button
                 onPress={() => router.push(social.href)}
                 className="rounded-full text-[#858585] dark:text-[#7e7e7e] bg-[#f3f3f3] dark:bg-[#232323]"
                 isIconOnly
+                aria-label={social.label}
               >
-                <span className="">{social.Icon}</span>
+                {social.Icon}
               </Button>
             </motion.div>
           </Tooltip>

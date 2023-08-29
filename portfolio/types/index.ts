@@ -30,3 +30,19 @@ interface ProjectImage {
     _key: string;
     url: string;
 }
+
+interface WorkExperience extends SanityBody {
+    jobTitle: string;
+    company: string;
+    summary: string;
+    technologies: Technology[];
+    workPoints: WorkPoint[];
+    dateStarted: string;
+    dateEnded: string;
+}
+
+interface WorkPoint {
+    _type: string;
+    _key: string;
+    point: string;
+}

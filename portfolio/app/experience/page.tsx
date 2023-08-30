@@ -13,7 +13,9 @@ export default async function ExperiencePage() {
 
   return (
     <Container>
-      <PageContent experiences={experiences} />
+      <div className="px-6">
+        <PageContent experiences={experiences} />
+      </div>
     </Container>
   );
 }

@@ -1,5 +1,3 @@
-'use client';
-
 import Header from '@/components/ui/header';
 import ProjectCard from './project-card';
 

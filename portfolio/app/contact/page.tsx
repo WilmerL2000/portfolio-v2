@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Container from '@/components/ui/container';
+import PageContent from './components/page-content';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -8,5 +9,11 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return <Container>ContactPage</Container>;
+  return (
+    <Container>
+      <div className="px-6">
+        <PageContent />
+      </div>
+    </Container>
+  );
 }

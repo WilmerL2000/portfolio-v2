@@ -11,7 +11,9 @@ export default function PageContent() {
     <motion.div variants={container} initial="hidden" animate="visible">
       <div className="flex flex-col justify-center items-center">
         <HeroSection />
-        <ArrowDownSign />
+        <div className="md:-translate-y-10">
+          <ArrowDownSign />
+        </div>
       </div>
       <About />
     </motion.div>

@@ -8,7 +8,7 @@ const tabInfo = [
     title: 'General',
     icon: <GanttChartSquare />,
     content:
-      'Dedicated, proactive and responsible person. Graduated with honors in Business Computing from the University of Costa Rica.',
+      'Dedicated, proactive and responsible person. Graduated with honors in Business Computing from the University of Costa Rica. \n I have focused on preparing myself to work mainly on the frontend but I also work on the backend.',
   },
   {
     title: 'Leisure',

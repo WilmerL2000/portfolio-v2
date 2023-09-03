@@ -1,11 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { item } from '@/lib/variants';
 import Image from 'next/image';
 
 export default function BannerImage() {
   return (
-    <div className="w-72 h-72 md:w-96 md:h-96 mt-24 relative">
+    <motion.div
+      variants={item}
+      className="w-72 h-72 md:w-96 md:h-96 mt-24 relative"
+    >
       <motion.div
         drag
         dragConstraints={{
@@ -57,6 +61,6 @@ export default function BannerImage() {
         height={500}
         className="rounded-full z-20 absolute md:w-96 md:h-auto"
       />
-    </div>
+    </motion.div>
   );
 }

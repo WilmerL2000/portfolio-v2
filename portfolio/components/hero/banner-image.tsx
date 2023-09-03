@@ -55,7 +55,7 @@ export default function BannerImage() {
       />
 
       <Image
-        src="/img/me.png"
+        src="/img/me.webp"
         alt="My picture"
         width={500}
         height={500}

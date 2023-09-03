@@ -14,6 +14,7 @@ export default function ProjectButton({ title, url, icon }: Props) {
   return (
     <Button
       onPress={() => router.push(url)}
+      name={title}
       disableRipple
       className="relative overflow-visible rounded-full hover:-translate-y-1 px-1 md:px-12 
         shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full 

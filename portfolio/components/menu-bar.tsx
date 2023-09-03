@@ -86,6 +86,7 @@ export default function MenuBar() {
               <Button
                 onPress={() => router.push(route.href)}
                 className="rounded-full text-[#858585] dark:text-[#7e7e7e] bg-[#f3f3f3] dark:bg-[#232323]"
+                name={route.label}
                 isIconOnly
                 aria-label={route.label}
               >
@@ -114,6 +115,7 @@ export default function MenuBar() {
               <Button
                 onPress={() => router.push(social.href)}
                 className="rounded-full text-[#858585] dark:text-[#7e7e7e] bg-[#f3f3f3] dark:bg-[#232323]"
+                name={social.label}
                 isIconOnly
                 aria-label={social.label}
               >

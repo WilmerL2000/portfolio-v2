@@ -28,7 +28,8 @@ export default function ThemeToggle() {
             className="rounded-full"
           >
             <Button
-              className="rounded-full text-[#858585] dark:text-[#7e7e7e] bg-[#f3f3f3] dark:bg-[#232323]  "
+              className="rounded-full text-[#858585] dark:text-[#7e7e7e] bg-[#f3f3f3] dark:bg-[#232323]"
+              name="toggle-dark"
               onPress={() => setTheme('dark')}
               isIconOnly
             >
@@ -45,7 +46,8 @@ export default function ThemeToggle() {
             className="rounded-full"
           >
             <Button
-              className="rounded-full text-[#858585] dark:text-[#7e7e7e] bg-[#f3f3f3] dark:bg-[#232323] "
+              className="rounded-full text-[#858585] dark:text-[#7e7e7e] bg-[#f3f3f3] dark:bg-[#232323]"
+              name="toggle-light"
               onPress={() => setTheme('light')}
               isIconOnly
             >

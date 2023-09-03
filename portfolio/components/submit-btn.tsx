@@ -13,6 +13,7 @@ export default function SubmitBtn() {
       hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 
       disabled:scale-100 disabled:bg-opacity-65"
       disabled={pending}
+      name="email-submit"
     >
       {pending ? (
         <div className="h-5 w-5 animate-spin rounded-lg border-b-2 border-white"></div>

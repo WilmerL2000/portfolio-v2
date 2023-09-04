@@ -28,6 +28,6 @@ export const menuItem = {
             duration: .8, type: 'spring'
         }
     },
-    animate: { y: -26, },
-    transition: { duration: 2, type: 'spring', stiffness: 400, damping: 17 }
+    animate: { y: -26 },
+    transition: { duration: 2, type: 'spring' }
 }

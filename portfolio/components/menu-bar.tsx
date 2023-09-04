@@ -15,6 +15,7 @@ import {
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import ThemeToggle from './ui/theme-toggle';
 import { menuItem } from '@/lib/variants';
+import { cn } from '@/lib/utils';
 
 export default function MenuBar() {
   const pathname = usePathname();
@@ -64,7 +65,7 @@ export default function MenuBar() {
   ];
 
   return (
-    <div
+    <nav
       className="fixed bottom-4 md:bottom-6 mx-auto inset-x-0 flex justify-center z-20 
       rounded-full shadow-lg max-w-max bg-white/80 backdrop-blur-md dark:bg-[#161616]/70 
       border border-solid dark:border-gray-800"
@@ -80,7 +81,6 @@ export default function MenuBar() {
             <motion.div
               variants={menuItem}
               whileHover={'initial'}
-              whileTap={'animate'}
               className="flex flex-col items-center gap-1 rounded-full"
             >
               <Button
@@ -93,7 +93,12 @@ export default function MenuBar() {
                 {route.Icon}
               </Button>
               {route.active && (
-                <span className="rounded-full w-1 h-1 bg-[#858585] dark:bg-[#7e7e7e]" />
+                <span
+                  className={cn(
+                    'rounded-full w-1 h-1 bg-[#858585] dark:bg-[#7e7e7e] opacity-0',
+                    { 'transition opacity-100 duration-700': route.active }
+                  )}
+                />
               )}
             </motion.div>
           </Tooltip>
@@ -109,7 +114,6 @@ export default function MenuBar() {
             <motion.div
               variants={menuItem}
               whileHover={'initial'}
-              whileTap={'animate'}
               className="rounded-full"
             >
               <Button
@@ -127,6 +131,6 @@ export default function MenuBar() {
         <Divider orientation="vertical" />
         <ThemeToggle />
       </div>
-    </div>
+    </nav>
   );
 }

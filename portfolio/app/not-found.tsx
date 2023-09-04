@@ -2,6 +2,6 @@
 
 import ErrorMessage from '@/components/ui/error-message';
 
-export default function Error() {
+export default function NotFound() {
   return <ErrorMessage />;
 }

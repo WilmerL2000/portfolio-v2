@@ -24,7 +24,6 @@ export default function ThemeToggle() {
           <motion.div
             variants={menuItem}
             whileHover={'initial'}
-            whileTap={'animate'}
             className="rounded-full"
           >
             <Button
@@ -42,7 +41,6 @@ export default function ThemeToggle() {
           <motion.div
             variants={menuItem}
             whileHover={'initial'}
-            whileTap={'animate'}
             className="rounded-full"
           >
             <Button

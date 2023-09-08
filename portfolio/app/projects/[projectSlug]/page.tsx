@@ -7,7 +7,7 @@ type Props = {
   params: { projectSlug: string };
 };
 
-export const revalidate = 86400;
+export const revalidate = 5000;
 
 export default async function ProjectPage({ params }: Props) {
   const projects = await getProjects();

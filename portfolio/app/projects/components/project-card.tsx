@@ -26,22 +26,22 @@ export default function ProjectCard({
         isPressable
         onPress={() => router.push(`/projects/${slug}`)}
         radius="lg"
-        className="border-solid rounded-lg h-full p-1"
+        className="border-solid h-full"
       >
         <Image
           alt={title}
-          className="object-cover scale-150 -translate-y-3"
+          className="object-cover scale-150 -translate-y-2"
           isZoomed
           src={projectImage}
         />
-        <motion.div layoutId={title}>
+        <div>
           <CardFooter
             className="absolute bg-black/40 border-1 overflow-hidden py-2 
             before:rounded-xl rounded-lg bottom-1 w-[calc(100%_-_8px)] shadow-small z-10"
           >
             <footer className="text-white/70">{title}</footer>
           </CardFooter>
-        </motion.div>
+        </div>
       </Card>
     </motion.div>
   );

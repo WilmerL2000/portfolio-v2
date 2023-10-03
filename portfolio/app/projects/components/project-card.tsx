@@ -20,13 +20,13 @@ export default function ProjectCard({
   const router = useRouter();
 
   return (
-    <motion.div layoutId={_id} className="card">
+    <motion.div layoutId={_id} className="card p-0">
       <Card
         isFooterBlurred
         isPressable
         onPress={() => router.push(`/projects/${slug}`)}
         radius="lg"
-        className="border-solid h-full"
+        className="border-solid h-full p-1"
       >
         <Image
           alt={title}
@@ -37,7 +37,7 @@ export default function ProjectCard({
         <div>
           <CardFooter
             className="absolute bg-black/40 border-1 overflow-hidden py-2 
-            before:rounded-xl rounded-lg bottom-1 w-[calc(100%_-_8px)] shadow-small z-10"
+            before:rounded-xl rounded-lg bottom-1 left-1 w-[calc(100%_-_8px)] shadow-small z-10"
           >
             <footer className="text-white/70">{title}</footer>
           </CardFooter>

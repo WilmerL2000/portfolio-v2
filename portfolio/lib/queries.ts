@@ -16,6 +16,7 @@ export const project = (slug: string) => {
       ...,
       "slug" : slug.current,
       technologies[]->,
+      testUser[]->,
     }[0]
     `
   return query

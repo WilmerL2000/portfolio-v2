@@ -30,6 +30,18 @@ export default defineType({
             type: "text",
         }),
         defineField({
+            name: 'isTestUser',
+            title: 'Is there a Test User?',
+            type: 'boolean'
+        }),
+        defineField({
+            name: 'testUser',
+            title: 'Test User',
+            type: 'array',
+            of: [{ type: "reference", to: { type: "testUser" } }],
+            hidden: ({ document }) => !document?.isTestUser
+        }),
+        defineField({
             name: 'technologies',
             title: 'Technologies',
             type: 'array',
@@ -52,4 +64,7 @@ export default defineType({
             type: "url",
         }),
     ],
+    initialValue: {
+        isTestUser: false
+    }
 })

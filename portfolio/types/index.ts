@@ -13,6 +13,8 @@ interface Project extends SanityBody {
     summary: string;
     webLink: string;
     repositoryLink: string;
+    isTestUser: boolean;
+    testUser?: TestUser[];
     technologies: Technology[]
     projectImages: ProjectImage[]
 }
@@ -45,4 +47,9 @@ interface WorkPoint {
     _type: string;
     _key: string;
     point: string;
+}
+
+interface TestUser extends SanityBody {
+    user: string;
+    password: string;
 }

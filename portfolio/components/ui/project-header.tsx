@@ -20,7 +20,7 @@ export default function ProjectHeader({
   website,
 }: ProjectHeaderProps) {
   return (
-    <motion.div
+    <motion.header
       style={{ backgroundImage: `url(${projectImage})` }}
       layoutId={id}
       className="rounded-3xl md:rounded-lg relative aspect-video min-h-[250px] md:max-h-[750px] w-full overflow-hidden bg-cover"
@@ -40,6 +40,6 @@ export default function ProjectHeader({
           />
         </div>
       </motion.div>
-    </motion.div>
+    </motion.header>
   );
 }

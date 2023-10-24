@@ -20,7 +20,7 @@ export default function ProjectCard({
   const router = useRouter();
 
   return (
-    <motion.div layoutId={_id} className="card p-0">
+    <motion.li layoutId={_id} className="card p-0">
       <Card
         isFooterBlurred
         isPressable
@@ -43,6 +43,6 @@ export default function ProjectCard({
           </CardFooter>
         </div>
       </Card>
-    </motion.div>
+    </motion.li>
   );
 }

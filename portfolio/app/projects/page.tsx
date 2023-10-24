@@ -4,7 +4,7 @@ import PageContent from './components/page-content';
 import AnimateLayout from '@/components/animate-layout';
 import { getProjects } from '@/actions/getProjects';
 
-export const revalidate = 1000;
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: 'Projects',

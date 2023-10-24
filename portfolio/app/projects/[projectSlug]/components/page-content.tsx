@@ -49,7 +49,7 @@ export default function PageContent({ project, projects }: Props) {
       >
         <motion.div
           variants={item}
-          className="px-5 md:px-0 flex flex-col gap-4"
+          className="flex flex-col gap-4"
         >
           {project.isTestUser && project.testUser && (
             <div className="dark:bg-white/10 p-5 rounded-lg shadow-lg dark:shadow-sm backdrop-blur-2xl">

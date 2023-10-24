@@ -41,7 +41,12 @@ export default function PageContent({ project, projects }: Props) {
         website={project.webLink}
       />
 
-      <motion.div variants={container} initial="hidden" animate="visible">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="px-5 md:px-0 flex flex-col gap-4"
+      >
         <motion.div
           variants={item}
           className="px-5 md:px-0 flex flex-col gap-4"

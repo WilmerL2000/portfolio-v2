@@ -41,26 +41,24 @@ export default function PageContent({ project, projects }: Props) {
         website={project.webLink}
       />
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="visible"
-        className="px-5 md:px-0 flex flex-col gap-4"
-      >
-        {project.isTestUser && project.testUser && (
-          <div className="dark:bg-white/10 p-5 rounded-lg shadow-lg dark:shadow-sm backdrop-blur-2xl">
-            <h2 className="uppercase font-bold text-lg md:text-4xl">
-              Test user
-            </h2>
-            <Divider className="mt-6 mb-6 " />
+      <motion.div variants={container} initial="hidden" animate="visible">
+        <motion.div
+          variants={item}
+          className="px-5 md:px-0 flex flex-col gap-4"
+        >
+          {project.isTestUser && project.testUser && (
+            <div className="dark:bg-white/10 p-5 rounded-lg shadow-lg dark:shadow-sm backdrop-blur-2xl">
+              <h2 className="uppercase font-bold text-lg md:text-4xl">
+                Test user
+              </h2>
+              <Divider className="mt-6 mb-6 " />
 
-            <div className="md:flex justify-around mt-4 gap-4 space-y-5 md:space-y-0">
-              <UserSnippet value={project.testUser[0].user} />
-              <UserSnippet value={project.testUser[0].password} />
+              <div className="md:flex justify-around mt-4 gap-4 space-y-5 md:space-y-0">
+                <UserSnippet value={project.testUser[0].user} />
+                <UserSnippet value={project.testUser[0].password} />
+              </div>
             </div>
-          </div>
-        )}
-        <motion.div variants={item}>
+          )}
           <div className="grid lg:grid-cols-2 gap-4">
             <Card className="py-4 bg-[#a855f7] rounded-lg">
               <CardHeader className="pt-2 flex items-center justify-between mb-4 px-8">

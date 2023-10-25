@@ -3,6 +3,7 @@
 import { Card, CardFooter, Image } from '@nextui-org/react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 type ProjectCardProps = {
   _id: string;
@@ -19,6 +20,8 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   const router = useRouter();
 
+  const [loading, setLoading] = useState<boolean>(false);
+
   return (
     <motion.li layoutId={_id} className="card p-0">
       <Card
@@ -33,6 +36,8 @@ export default function ProjectCard({
           className="object-cover scale-150 -translate-y-2"
           isZoomed
           src={projectImage}
+          isLoading={!loading}
+          onLoad={() => setLoading((loading) => !loading)}
         />
         <div>
           <CardFooter

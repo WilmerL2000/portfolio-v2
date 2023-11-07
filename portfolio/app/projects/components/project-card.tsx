@@ -28,12 +28,12 @@ export default function ProjectCard({
         isFooterBlurred
         isPressable
         onPress={() => router.push(`/projects/${slug}`)}
-        radius="lg"
+        radius="sm"
         className="border-solid h-full p-1"
       >
         <Image
           alt={title}
-          className="object-cover scale-150 -translate-y-2"
+          className="object-cover scale-150 -translate-y-2 rounded-sm"
           isZoomed
           src={projectImage}
           isLoading={!loading}

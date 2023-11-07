@@ -23,7 +23,7 @@ export default function ProjectHeader({
     <motion.header
       style={{ backgroundImage: `url(${projectImage})` }}
       layoutId={id}
-      className="rounded-lg relative aspect-video min-h-[250px] md:max-h-[650px] w-full overflow-hidden bg-cover"
+      className="rounded-lg relative aspect-video min-h-[250px] md:max-h-[700px] w-full overflow-hidden bg-cover"
     >
       <motion.div
         layoutId={title}
